@@ -15,18 +15,17 @@
 *               
 **********************************************************************************/
 
-//循环遍历，O(n^2)
+//暴力枚举匹配，O(n^2)
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         int numssiz = nums.size();
-        for(int i1 = 0; i1 < numssiz; ++i1) {
-            for(int i2 = i1 + 1; i2 < numssiz; ++i2) {
-                if(nums[i1] + nums[i2] == target)
-                return {i1, i2};
+        for(int i = 0; i < numssiz; ++i) {
+            for(int j = i + 1; j < numssiz; ++j) {
+                if(nums[i] + nums[j] == target)
+                return {i, j};
             }
         }
-        cout << "给定值有误" << endl;
         return {};
     }
 };
@@ -34,4 +33,29 @@ public:
 /* 说明：
  * 1.用 return语句 终止程序，而不是 break语句 跳出循环；
  * 2.return语句返回值，不需要构造一个临时对象（类似 vector<int>({i1, i2})），直接用{i1, i2}即可；
+ */
+
+
+//哈希表匹配，O(n)
+/*
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        int numssiz = nums.size();
+        unordered_map<int, int> hashtable;
+        for(int i = 0; i < numssiz; ++i) {
+            auto it = hashtable.find(target - nums[i]);
+            if(it != hashtable.end()) 
+                return {it->second, i};
+            hashtable[nums[i]] = i; 
+            }
+        
+        return {};
+    }
+};
+*/
+
+/* 说明：
+ * 1.暴力枚举中，为寻找target-nums[i]导致了较高的时间复杂度；
+ * 2.考虑到是要在数组中快速寻找到匹配数，因此可以用哈希表来做；
  */
