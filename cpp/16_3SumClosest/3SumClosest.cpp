@@ -9,3 +9,28 @@
 * 返回这三个数的和。假定每组输入只存在唯一答案。
 * 
 **********************************************************************************/
+
+class Solution {
+public:
+    int threeSumClosest(vector<int>& nums, int target) {
+        sort(nums.begin(), nums.end());
+        int numssiz = nums.size();
+        int ans = nums[0] + nums[1] + nums[numssiz -1];
+        for(int first = 0; first < numssiz - 2; ++first) {
+            int third = numssiz - 1;
+            for(int second = first + 1; second < numssiz - 1; ++second)
+                while(second < third) {             
+                    int ans = nums[first] + nums[second] + nums[third];
+                    if(ans < target) {
+                    ++second;
+                    ans = abs(ans - target) < abs(sum - target) ? ans : sum;
+                    }
+                    else {
+                    --third;
+                    ans = abs(ans - target) < abs(sum - target) ? ans : sum;
+                    }
+                }
+        }
+        return ans; 
+    }
+};
