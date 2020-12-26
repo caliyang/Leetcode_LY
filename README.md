@@ -15,3 +15,6 @@ LeetCode
 |31|[Next Permutation](https://leetcode-cn.com/problems/next-permutation/)|[C++](./cpp/31_nextPermutation/nextPermutation.cpp)|Medium|
 |33|[Search in Rotated Sorted Array](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)|[C++](./cpp/33_searchInRotatedSortedArray/searchInRotatedSortedArray.cpp)|Medium|
 |34|[Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[C++](./cpp/34_findFirstAndLastPositionOfElementInSortedArray/findFirstAndLastPositionOfElementInSortedArray.cpp)|Medium|
+|35|[Search Insert Position](https://leetcode-cn.com/problems/search-insert-position/)|[C++](./cpp/35_ searchInsertPosition/searchInsertPosition.cpp)|Easy|
+|39|[Combination Sum](https://leetcode-cn.com/problems/combination-sum/)|[C++](./cpp/39_combinationSum/combinationSum.cpp)|Medium|
+|40|[Combination Sum II](https://leetcode-cn.com/problems/combination-sum-ii/)|[C++](./cpp/40_combinationSumII/combinationSumII.cpp)|Medium|
