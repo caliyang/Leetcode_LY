@@ -65,18 +65,26 @@ public:
         return {begin, end};
     }
 };
-*/
 
 /********************************************************************************** 
 * 说明：
 * 二分查找法查找有无该target的关键步骤：
 *   1.特例：数组长度为0或1时；
 *   2.小于等于：l <= r；
-*   3.middle等于判断（target == nums[middle]）；
+*   3.middle等于判断（if(target == nums[middle])）；
 *   4.middle不等于时的处理；
+*     if(target < nums[mid]) r = mid - 1;
+*     else l = mid + 1;
 * 二分查找法查找大于等于/大于target的关键步骤：
 *   1.特例：数组长度为0或1时；
 *   2.小于等于：l <= r；
-*   3.middle等于判断（target == nums[middle]）；
-*   4.middle不等于时的处理；
+*   3.middle大于等于（flag = 1）或大于（flag = 0）时的处理；
+*     if (nums[mid] > target || (flag && nums[mid] >= target)) {right = mid - 1; ans = mid;} 
+*     else {left = mid + 1;}
+* 二分查找法查找小于等于（flag = 1）或大于（flag = 0）target的关键步骤：
+*   1.特例：数组长度为0或1时；
+*   2.小于等于：l <= r；
+*   3.middle小于等于或小于时的处理；
+*     if (nums[mid] < target || (flag && nums[mid] <= target)) {left = mid + 1; ans = mid;} 
+*     else {right = mid - 1;}
 **********************************************************************************/
