@@ -13,3 +13,44 @@
 * 解集不能包含重复的组合。 
 **********************************************************************************/
 
+class Solution {
+public:
+    //void - & - & - & - return - return; 
+    void bsa(vector<int>& candidates, vector<vector<int>>& ans, vector<int>& combine, int target, int index) {
+        //递归基
+        if(index == candidates.size()) return; //第一种结果：数组中元素使用完的情况
+        if(target == 0) {
+            ans.emplace_back(combine);
+            return; //第二种结果：命中时的情况
+        }
+
+        //递归分类
+        bsa(candidates, ans, combine, target, index + 1); //第一种递归：忽略当下索引值的情况
+
+        if(target - candidates[index] >= 0) { //第二种递归：使用当下索引值的情况
+            combine.emplace_back(candidates[index]);
+            bsa(candidates, ans, combine, target - candidates[index], index);
+            combine.pop_back(); // 第三种结果：回溯到最开始的情况
+        }
+    }
+
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<vector<int>> ans;
+        vector<int> combine;
+        bsa(candidates, ans, combine, target, 0);
+        return ans;
+    }
+};
+
+/********************************************************************************** 
+* 说明：
+* 1.对于这类寻找所有可行解的题，我们都可以尝试用「搜索回溯」的方法来解决；
+* 2.搜索回溯的过程一定存在一些优秀的剪枝方法来使得程序运行得更快。本例中是
+*   if(target - candidates[index] >= 0);
+* 3.明确自己的树中展示的是哪一时刻的数值。题解中用的时刻是  
+*   void dfs(vector <int>& candidates, int target, vector<vector<int>>& ans, vector<int>& combine, int idx)；
+* 4.终止条件为 target <= 0 或者 candidates 数组被全部用完，有三种结局：
+*   一是数组被全部用完的结局，即进入if(idx == candidates.size())后，return；
+*   二是target < 0时的结局，回溯到最开始的时候，算是真正意义上的递归；
+*   三是target = 0的时候，即满足要求的combine；
+**********************************************************************************/
