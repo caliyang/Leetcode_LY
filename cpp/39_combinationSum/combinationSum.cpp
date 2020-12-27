@@ -49,8 +49,8 @@ public:
 *   if(target - candidates[index] >= 0);
 * 3.明确自己的树中展示的是哪一时刻的数值。题解中用的时刻是  
 *   void dfs(vector <int>& candidates, int target, vector<vector<int>>& ans, vector<int>& combine, int idx)；
-* 4.终止条件为 target <= 0 或者 candidates 数组被全部用完，有三种结局：
-*   一是数组被全部用完的结局，即进入if(idx == candidates.size())后，return；
-*   二是target < 0时的结局，回溯到最开始的时候，算是真正意义上的递归；
+* 4.终止条件为 target <= 0 或者 candidates 数组被全部用完，有三种情况，两种结局：
+*   一是target < 0时的结局，往上回溯一步，最终结局为下面二种之一；
+*   二是数组被全部用完的结局，即进入if(idx == candidates.size())后，return；
 *   三是target = 0的时候，即满足要求的combine；
 **********************************************************************************/
