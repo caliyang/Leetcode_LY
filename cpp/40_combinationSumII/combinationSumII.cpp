@@ -26,6 +26,7 @@
 **********************************************************************************/
 
 /*补充-错误答案：一点奇怪的是，数组元素重复的话，直接照搬“不重复 + 一次”的求解，如果首先不sort，输出甚至会少，而不是带有重复的全部输出；
+                                                                         另外，sort后再reverse，输出也会少；
 class Solution {
 public:
     void bsa(vector<int>& candidates, vector<vector<int>>& ans, vector<int>& combine, int target, int index) {
