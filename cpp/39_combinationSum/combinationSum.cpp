@@ -30,7 +30,7 @@ public:
         if(target - candidates[index] >= 0) { //第二种递归：使用当下索引值的情况
             combine.emplace_back(candidates[index]);
             bsa(candidates, ans, combine, target - candidates[index], index);
-            combine.pop_back(); // 第三种结果：回溯到最开始的情况
+            combine.pop_back(); // 第三种结果：回溯到函数开始的情况
         }
     }
 
