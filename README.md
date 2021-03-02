@@ -17,7 +17,7 @@ LeetCode
 |34|[Find First and Last Position of Element in Sorted Array](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)|[C++](./cpp/34_findFirstAndLastPositionOfElementInSortedArray/findFirstAndLastPositionOfElementInSortedArray.cpp)|Medium|
 |35|[Search Insert Position](https://leetcode-cn.com/problems/search-insert-position/)|[C++](./cpp/35_searchInsertPosition/searchInsertPosition.cpp)|Easy|
 |39|[Combination Sum](https://leetcode-cn.com/problems/combination-sum/)|[C++](./cpp/39_combinationSum/combinationSum.cpp)|Medium|
-|40|[Combination Sum II](https://leetcode-cn.com/problems/combination-sum-ii/)|[C++](./cpp/40_combinationSumII/combinationSumII.cpp)|Medium|
+|\*40|[Combination Sum II](https://leetcode-cn.com/problems/combination-sum-ii/)|[C++](./cpp/40_combinationSumII/combinationSumII.cpp)|Medium|
 |48|[Rotate Image](https://leetcode-cn.com/problems/rotate-image/)|[C++](./cpp/48_rotateImage/rotateImage.cpp)|Medium|
 |53|[Maximum Subarray](https://leetcode-cn.com/problems/maximum-subarray/)|[C++](./cpp/53_maximumSubarray/maximumSubarray.cpp)|Easy|
 |54|[Spiral Matrix](https://leetcode-cn.com/problems/spiral-matrix/)|[C++](./cpp/54_spiralMatrix/spiralMatrix.cpp)|Medium|
