@@ -21,3 +21,10 @@ LeetCode
 |48|[Rotate Image](https://leetcode-cn.com/problems/rotate-image/)|[C++](./cpp/48_rotateImage/rotateImage.cpp)|Medium|
 |53|[Maximum Subarray](https://leetcode-cn.com/problems/maximum-subarray/)|[C++](./cpp/53_maximumSubarray/maximumSubarray.cpp)|Easy|
 |54|[Spiral Matrix](https://leetcode-cn.com/problems/spiral-matrix/)|[C++](./cpp/54_spiralMatrix/spiralMatrix.cpp)|Medium|
+
+
+### Common STL functions
+
+| # | Function Name | Note  |
+|---| ----- | -------- |
+|01|std::swap: exchange values of two objects|This function is no longer defined in header <algorithm>, but in <utility>.(C++ 11)|
