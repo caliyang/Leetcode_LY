@@ -25,6 +25,7 @@ LeetCode
 
 ### Common STL functions
 
-| # | Function Name | Note  |
+| # | Function | Note |
 |---| ----- | -------- |
-|01|std::swap: exchange values of two objects|This function is no longer defined in header <algorithm>, but in <utility>.(C++ 11)|
+|01|std::swap: exchange values of two objects|This function is no longer defined in header \<algorithm\>, but in \<utility\>. (C++ 11)|
+|02|std::vector::size: Returns the number of elements in the vector.|\<vector\>; Member type size_type is an unsigned integral type.; This is the number of actual objects held in the vector, which is not necessarily equal to its storage capacity.|
